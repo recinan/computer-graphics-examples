@@ -16,7 +16,7 @@ glClear (GL_COLOR_BUFFER_BIT);
 glColor3f (1.0, 1.0, 1.0);
 /* in 1st row, 3 lines, each with a different stipple */
 glEnable (GL_LINE_STIPPLE);
-glLineStipple (1, 0x0101); /* dotted */
+glLineStipple (1, 0x3F07);/*tted */
 drawOneLine (50.0, 125.0, 150.0, 125.0);
 glLineStipple (1, 0x00FF); /* dashed */
 drawOneLine (150.0, 125.0, 250.0, 125.0);

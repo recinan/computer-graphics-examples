@@ -15,10 +15,10 @@ int main(int argc, char** argv)
    glOrtho(-2.0, 2.0, -2.0, 2.0, -1.0, 1.0);
    glPointSize(5);
    glBegin(GL_POINTS);
-   	  	glColor3f(1.0, 1.0, 0);
+   	  	//glColor3f(1.0, 1.0, 0);
 		glColor3f(1.0, 0, 0);
 		glVertex2f(0.5, 0.5);
-		glColor3f(1.0, 1.0, 0);
+		//glColor3f(1.0, 1.0, 0);
 		glColor3f(0, 0, 1.0);
 		glVertex2f(1.5, 0.5);
       

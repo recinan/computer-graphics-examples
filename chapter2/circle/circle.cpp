@@ -21,7 +21,7 @@ int main(int argc, char** argv)
    glBegin(GL_LINE_LOOP);
       for(i=0;i<circle_points;i++){
 			angle = 2*PI*i/circle_points;
-			glVertex2f(cos(angle), sin(angle));
+			glVertex2f(1 + cos(angle), 3 + sin(angle)); // Center of circle (1.0,1.0)
 		}
 		
    glEnd();
