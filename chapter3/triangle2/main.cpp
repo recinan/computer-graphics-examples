@@ -13,11 +13,16 @@ int main(int argc, char** argv)
    glMatrixMode(GL_PROJECTION);
    glLoadIdentity();
    glOrtho(-12.0, 12.0, -12.0, 12.0, -12.0, 12.0);
-   
+   glEnable(GL_LINE_STIPPLE);
+   glLineStipple(1,0x0F0F);
    glLineWidth(2);
    glBegin(GL_LINES);
-   		glVertex2f(-12.0,0.0);
    		glVertex2f(12.0,0.0);
+   		glVertex2f(-12.0,0.0);
+   		glVertex2f(0.0,12.0);
+   		glVertex2f(0.0,-12.0);
+	glEnd();
+	glBegin(GL_LINES);
    		glVertex2f(0.0,12.0);
    		glVertex2f(0.0,-12.0);
 	glEnd();
@@ -100,6 +105,7 @@ int main(int argc, char** argv)
 		glVertex2f(3.0,2.0);
 	glEnd();
 	
+	glLineStipple(1,0xFFFF);
 	glLoadIdentity();
 	glColor3f(1.0,0.0,0.0);
 	glScalef(-1.0,1.0,1.0);
@@ -115,6 +121,7 @@ int main(int argc, char** argv)
 		glVertex2f(3.0,2.0);
 	glEnd();
 	
+	glLineStipple(1,0xFFFF);
 	glLoadIdentity();
 	glColor3f(0.0,1.0,0.0);
 	glTranslatef(-2.0,1.0,0.0);
