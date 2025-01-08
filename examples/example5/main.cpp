@@ -19,6 +19,45 @@ int main(int argc, char** argv)
       glVertex2f(0.0, -10.0);
       glVertex2f(0.0, 10.0);
    glEnd();
+      
+   glBegin(GL_LINES);
+   		glVertex2f(1.0,1.0);
+   		glVertex2f(3.0,1.0);
+   glEnd();
+   
+   glMatrixMode(GL_MODELVIEW);
+   glLoadIdentity();
+   glTranslatef(3.0,2.0,0.0);
+   glRotatef(90.0,0.0,0.0,1.0);
+   glTranslatef(-3.0,-2.0,0.0);
+   glBegin(GL_LINES);
+   		glVertex2f(1.0,1.0);
+   		glVertex2f(3.0,1.0);
+   glEnd();
+   
+   glLoadIdentity();
+   glTranslatef(-2.0,0.0,0.0);
+   glTranslatef(3.0,2.0,0.0);
+   glRotatef(90.0,0.0,0.0,1.0);
+   glTranslatef(-3.0,-2.0,0.0);
+   glBegin(GL_LINES);
+   		glVertex2f(1.0,1.0);
+   		glVertex2f(3.0,1.0);
+   glEnd();
+   
+   glLoadIdentity();
+   glScalef(3.0,3.0,1.0);
+   glTranslatef(-2.0,0.0,0.0);
+   glTranslatef(3.0,2.0,0.0);
+   glRotatef(30.0,0.0,0.0,1.0);
+   glTranslatef(-3.0,-2.0,0.0);
+   glBegin(GL_LINES);
+   		glVertex2f(1.0,1.0);
+   		glVertex2f(3.0,1.0);
+   glEnd();
+   
+   
+   
    glFlush();
 
    Sleep(3000);

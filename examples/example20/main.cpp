@@ -12,16 +12,14 @@ int main(int argc, char** argv)
    glColor3f(1.0, 1.0, 1.0);
    glMatrixMode(GL_PROJECTION);
    glLoadIdentity();
-   glOrtho(-10.0, 10.0, -10.0, 10.0, -10.0, 10.0);
+   glOrtho(-15.0, 15.0, -15.0, 15.0, -15.0, 15.0);
    glBegin(GL_LINES);
-      glVertex2f(-10.0, 0.0);
-      glVertex2f(10.0, 0.0);
-      glVertex2f(0.0, -10.0);
-      glVertex2f(0.0, 10.0);
+      glVertex2f(-15.0, 0.0);
+      glVertex2f(15.0, 0.0);
+      glVertex2f(0.0, -15.0);
+      glVertex2f(0.0, 15.0);
    glEnd();
-   
-   glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-   glColor3f(1.0,0.0,0.0);
+   glPolygonMode(GL_FRONT_AND_BACK,GL_LINE);
    glBegin(GL_TRIANGLES);
    		glVertex2f(2.0,4.0);
    		glVertex2f(3.0,4.0);
@@ -29,61 +27,41 @@ int main(int argc, char** argv)
    glEnd();
    
    glMatrixMode(GL_MODELVIEW);
-   glLoadIdentity();
-   glColor3f(0.0,1.0,0.0);
-   glRotatef(60.0,0.0,0.0,1.0);
-   glBegin(GL_TRIANGLES);
-   		glVertex2f(2.0,4.0);
-   		glVertex2f(3.0,4.0);
-   		glVertex2f(2.0,5.0);
-   glEnd();
    
    glLoadIdentity();
-   glColor3f(0.0,1.0,0.0);
-   glScalef(2.0,2.0,1.0);
-   glRotatef(60.0,0.0,0.0,1.0);
-   glBegin(GL_TRIANGLES);
-   		glVertex2f(2.0,4.0);
-   		glVertex2f(3.0,4.0);
-   		glVertex2f(2.0,5.0);
-   glEnd();
-   
-   glLoadIdentity();
-   glColor3f(1.0,1.0,0.0);
-   glScalef(1.0,-1.0,1.0);
-   glScalef(2.0,2.0,1.0);
-   glRotatef(60.0,0.0,0.0,1.0);
-   glPushMatrix();
-   glBegin(GL_TRIANGLES);
-   		glVertex2f(2.0,4.0);
-   		glVertex2f(3.0,4.0);
-   		glVertex2f(2.0,5.0);
-   glEnd();
-   
-   glLoadIdentity();
-   glPopMatrix();
+   glTranslatef(3.0,5.0,0.0);
+   glRotatef(90.0,0.0,0.0,1.0);
+   glTranslatef(-3.0,-5.0,0.0);
    glColor3f(1.0,0.0,0.0);
-   glBegin(GL_LINES);
-   		glVertex2f(1.0,1.0);
-   		glVertex2f(1.0,5.0);
+   glBegin(GL_TRIANGLES);
+   		glVertex2f(2.0,4.0);
+   		glVertex2f(3.0,4.0);
+   		glVertex2f(2.0,5.0);
    glEnd();
    
+   glLoadIdentity();
+   glTranslatef(-2.0,1.0,0.0);
+   glTranslatef(3.0,5.0,0.0);
+   glRotatef(90.0,0.0,0.0,1.0);
+   glTranslatef(-3.0,-5.0,0.0);
    glColor3f(0.0,1.0,0.0);
-   glBegin(GL_LINES);
-   		glVertex2f(1.0,5.0);
-   		glVertex2f(5.0,5.0);
+   glBegin(GL_TRIANGLES);
+   		glVertex2f(2.0,4.0);
+   		glVertex2f(3.0,4.0);
+   		glVertex2f(2.0,5.0);
    glEnd();
    
+   glLoadIdentity();
+   glScalef(2.0,2.0,1.0);
+   glTranslatef(-2.0,1.0,0.0);
+   glTranslatef(3.0,5.0,0.0);
+   glRotatef(90.0,0.0,0.0,1.0);
+   glTranslatef(-3.0,-5.0,0.0);
    glColor3f(0.0,0.0,1.0);
-   glBegin(GL_LINES);
-   		glVertex2f(5.0,5.0);
-   		glVertex2f(5.0,1.0);
-   glEnd();
-   
-   glColor3f(1.0,1.0,0.0);
-   glBegin(GL_LINES);
-   		glVertex2f(5.0,1.0);
-   		glVertex2f(1.0,1.0);
+   glBegin(GL_TRIANGLES);
+   		glVertex2f(2.0,4.0);
+   		glVertex2f(3.0,4.0);
+   		glVertex2f(2.0,5.0);
    glEnd();
    
    glFlush();

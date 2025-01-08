@@ -20,7 +20,7 @@ int main(int argc, char** argv)
 		glVertex2f(0.0,-20.0);
 		glVertex2f(0.0,20.0);
 	glEnd();
-	glColor3f(0.0,0.0,1.0);
+	glColor3f(1.0,0.0,0.0);
 	glBegin(GL_TRIANGLES);
 		glVertex2f(1.0,1.0);
 		glVertex2f(3.0,1.0);
@@ -28,9 +28,9 @@ int main(int argc, char** argv)
 	glEnd();
 	
 	glMatrixMode(GL_MODELVIEW);
-		glRotatef(30.0,0.0,0.0,1.0);
-	glPushMatrix();
-	glColor3f(0.0,0.0,1.0);
+	glLoadIdentity();
+	glRotatef(30.0,0.0,0.0,1.0);
+	glColor3f(0.0,1.0,0.0);
 	glBegin(GL_TRIANGLES);
 		glVertex2f(1.0,1.0);
 		glVertex2f(3.0,1.0);
@@ -40,7 +40,6 @@ int main(int argc, char** argv)
 	glLoadIdentity();
 	glScalef(2.0,3.0,0.0);
 	glRotatef(30.0,0.0,0.0,1.0);
-	glPushMatrix();
 	glColor3f(0.0,0.0,1.0);
 	glBegin(GL_TRIANGLES);
 		glVertex2f(1.0,1.0);
@@ -52,7 +51,6 @@ int main(int argc, char** argv)
 	glScalef(-1.0,1.0,1.0);
 	glScalef(2.0,3.0,0.0);
 	glRotatef(30.0,0.0,0.0,1.0);
-	glPushMatrix();
 	glColor3f(0.0,0.0,1.0);
 	glBegin(GL_TRIANGLES);
 		glVertex2f(1.0,1.0);
@@ -65,30 +63,25 @@ int main(int argc, char** argv)
 	glScalef(-1.0,1.0,1.0);
 	glScalef(2.0,3.0,0.0);
 	glRotatef(30.0,0.0,0.0,1.0);
+	glColor3f(0.0,0.0,1.0);
 	glPushMatrix();
+	glBegin(GL_TRIANGLES);
+		glVertex2f(1.0,1.0);
+		glVertex2f(3.0,1.0);
+		glVertex2f(3.0,3.0);
+	glEnd();
+	
+	glLoadIdentity();
 	glColor3f(0.0,1.0,1.0);
-	glBegin(GL_TRIANGLES);
-		glVertex2f(1.0,1.0);
-		glVertex2f(3.0,1.0);
-		glVertex2f(3.0,3.0);
-	glEnd();
-	
-	glLoadIdentity();
-	glColor3f(1.0,0.0,0.0);
-	glBegin(GL_TRIANGLES);
-		glVertex2f(1.0,1.0);
-		glVertex2f(3.0,1.0);
-		glVertex2f(3.0,3.0);
-	glEnd();
-	
-	glLoadIdentity();
 	glPopMatrix();
-	glColor3f(1.0,0.0,0.0);
 	glBegin(GL_TRIANGLES);
 		glVertex2f(1.0,1.0);
 		glVertex2f(3.0,1.0);
 		glVertex2f(3.0,3.0);
 	glEnd();
+	
+	
+	
 	
    glFlush();
 

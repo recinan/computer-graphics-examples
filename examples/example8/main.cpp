@@ -12,56 +12,59 @@ int main(int argc, char** argv)
    glColor3f(1.0, 1.0, 1.0);
    glMatrixMode(GL_PROJECTION);
    glLoadIdentity();
-   glOrtho(-10.0, 10.0, -10.0, 10.0, -10.0, 10.0);
+   glOrtho(-20.0, 20.0, -20.0, 20.0, -20.0, 20.0);
    glBegin(GL_LINES);
-      glVertex2f(-10.0, 0.0);
-      glVertex2f(10.0, 0.0);
-      glVertex2f(0.0, -10.0);
-      glVertex2f(0.0, 10.0);
+      glVertex2f(-20.0, 0.0);
+      glVertex2f(20.0, 0.0);
+      glVertex2f(0.0, -20.0);
+      glVertex2f(0.0, 20.0);
    glEnd();
    
-   //Dikdörtgen
-   glColor3f(1.0,0.0,0.0);
    glBegin(GL_LINE_LOOP);
    		glVertex2f(1.0,1.0);
-   		glVertex2f(3.0,1.0);
-   		glVertex2f(3.0,2.0);
-   		glVertex2f(1.0,2.0);
+   		glVertex2f(5.0,1.0);
+   		glVertex2f(5.0,3.0);
+   		glVertex2f(1.0,3.0);
    glEnd();
    
    glMatrixMode(GL_MODELVIEW);
+   
    glLoadIdentity();
-   glColor3f(0.0,1.0,0.0);
+   //glOrtho(-20.0, 20.0, -20.0, 20.0, -20.0, 20.0);
    glRotatef(90.0,0.0,0.0,1.0);
+   glColor3f(1.0,0.0,0.0);
    glBegin(GL_LINE_LOOP);
    		glVertex2f(1.0,1.0);
-   		glVertex2f(3.0,1.0);
-   		glVertex2f(3.0,2.0);
-   		glVertex2f(1.0,2.0);
+   		glVertex2f(5.0,1.0);
+   		glVertex2f(5.0,3.0);
+   		glVertex2f(1.0,3.0);
    glEnd();
    
    glLoadIdentity();
-   glColor3f(0.0,0.0,1.0);
+   //glOrtho(-20.0, 20.0, -20.0, 20.0, -20.0, 20.0);
    glScalef(3.0,2.0,1.0);
    glRotatef(90.0,0.0,0.0,1.0);
+   glColor3f(0.0,1.0,0.0);
    glBegin(GL_LINE_LOOP);
    		glVertex2f(1.0,1.0);
-   		glVertex2f(3.0,1.0);
-   		glVertex2f(3.0,2.0);
-   		glVertex2f(1.0,2.0);
+   		glVertex2f(5.0,1.0);
+   		glVertex2f(5.0,3.0);
+   		glVertex2f(1.0,3.0);
    glEnd();
    
    glLoadIdentity();
-   glColor3f(1.0,1.0,0.0);
+   //glOrtho(-20.0, 20.0, -20.0, 20.0, -20.0, 20.0);
    glTranslatef(-2.0,1.0,0.0);
    glScalef(3.0,2.0,1.0);
    glRotatef(90.0,0.0,0.0,1.0);
+   glColor3f(0.0,0.0,1.0);
    glBegin(GL_LINE_LOOP);
    		glVertex2f(1.0,1.0);
-   		glVertex2f(3.0,1.0);
-   		glVertex2f(3.0,2.0);
-   		glVertex2f(1.0,2.0);
+   		glVertex2f(5.0,1.0);
+   		glVertex2f(5.0,3.0);
+   		glVertex2f(1.0,3.0);
    glEnd();
+   	
    
    glFlush();
 

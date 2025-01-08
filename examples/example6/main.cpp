@@ -12,35 +12,36 @@ int main(int argc, char** argv)
    glColor3f(1.0, 1.0, 1.0);
    glMatrixMode(GL_PROJECTION);
    glLoadIdentity();
-   glOrtho(-15.0, 15.0, -15.0, 15.0, -15.0, 15.0);
+   glOrtho(-10.0, 10.0, -10.0, 10.0, -10.0, 10.0);
    glBegin(GL_LINES);
-      glVertex2f(-15.0, 0.0);
-      glVertex2f(15.0, 0.0);
-      glVertex2f(0.0, -15.0);
-      glVertex2f(0.0, 15.0);
+      glVertex2f(-10.0, 0.0);
+      glVertex2f(10.0, 0.0);
+      glVertex2f(0.0, -10.0);
+      glVertex2f(0.0, 10.0);
    glEnd();
    
-   glEnable(GL_LINE_STIPPLE);
-   glLineStipple(1,0x3E37);
-   glLineWidth(3.0);
-   glRotatef(45.0,0.0,0.0,0.0);
    glColor3f(1.0,0.0,0.0);
    glBegin(GL_LINES);
    		glVertex2f(1.0,1.0);
-   		glVertex2f(10.0,1.0);
+   		glVertex2f(1.0,4.0);
    glEnd();
    
-   glPointSize(3.0);
    glColor3f(0.0,1.0,0.0);
-   glBegin(GL_POINTS);
-   		glVertex2f(1.5,1.5);
+   glBegin(GL_LINES);
+   		glVertex2f(1.0,4.0);
+   		glVertex2f(4.0,4.0);
    glEnd();
    
-   glPointSize(3.0);
    glColor3f(0.0,0.0,1.0);
-   glTranslatef(2.0,-1.0,0.0);
-   glBegin(GL_POINTS);
-   		glVertex2f(1.5,1.5);
+   glBegin(GL_LINES);
+   		glVertex2f(4.0,4.0);
+   		glVertex2f(4.0,1.0);
+   glEnd();
+   
+   glColor3f(1.0,1.0,0.0);
+   glBegin(GL_LINES);
+   		glVertex2f(4.0,1.0);
+   		glVertex2f(1.0,1.0);
    glEnd();
    
    glFlush();

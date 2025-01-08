@@ -7,22 +7,25 @@ int main(int argc, char** argv)
    auxInitPosition (0, 0, 500, 500);
    auxInitWindow (argv[0]);
 
-   glClearColor (0.0, 0.0, 0.0, 0.0);
+   glClearColor(0.0,0.0,0.0,0.0);
    glClear(GL_COLOR_BUFFER_BIT);
-   glColor3f(1.0, 1.0, 1.0);
    glMatrixMode(GL_PROJECTION);
    glLoadIdentity();
-   glOrtho(-10.0, 10.0, -10.0, 10.0, -10.0, 10.0);
+   glOrtho(-10.0,10.0,-10.0,10.0,-10.0,10.0);
+   glColor3f(1.0,1.0,1.0);
+   
    glBegin(GL_LINES);
-      glVertex2f(-10.0, 0.0);
-      glVertex2f(10.0, 0.0);
-      glVertex2f(0.0, -10.0);
-      glVertex2f(0.0, 10.0);
-   glEnd();
+		glVertex2f(-10.0,0.0);
+		glVertex2f(10.0,0.0);
+		glVertex2f(0.0,-10.0);
+		glVertex2f(0.0,10.0);
+	glEnd();
+   
    glEnable(GL_LINE_STIPPLE);
    glLineStipple(1,0x160F);
-   glLineWidth(1.0);
+   
    glColor3f(1.0,0.0,0.0);
+   glLineWidth(1.0);
    glBegin(GL_LINES);
    		glVertex2f(1.0,1.0);
    		glVertex2f(1.0,5.0);
@@ -43,11 +46,12 @@ int main(int argc, char** argv)
    glEnd();
    
    glLineWidth(4.0);
-   glColor3f(1.0,1.0,0.0);
-   glBegin(GL_LINES);
-   		glVertex2f(5.0,1.0);
-   		glVertex2f(1.0,1.0);
+	glColor3f(1.0,1.0,0.0);
+	glBegin(GL_LINES);
+	glVertex2f(5.0,1.0);
+	glVertex2f(1.0,1.0);
    glEnd();
+   
    glFlush();
 
    Sleep(3000);
