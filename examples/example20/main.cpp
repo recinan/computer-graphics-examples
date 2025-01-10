@@ -1,6 +1,14 @@
 #include <GL/gl.h>
 #include <GL/glaux.h>
 
+void drawTriangle(){
+	glBegin(GL_TRIANGLES);
+   		glVertex2f(2.0,4.0);
+   		glVertex2f(3.0,4.0);
+   		glVertex2f(2.0,5.0);
+   glEnd();
+	}
+
 int main(int argc, char** argv)
 {
    auxInitDisplayMode (AUX_SINGLE | AUX_RGBA);
@@ -20,11 +28,7 @@ int main(int argc, char** argv)
       glVertex2f(0.0, 15.0);
    glEnd();
    glPolygonMode(GL_FRONT_AND_BACK,GL_LINE);
-   glBegin(GL_TRIANGLES);
-   		glVertex2f(2.0,4.0);
-   		glVertex2f(3.0,4.0);
-   		glVertex2f(2.0,5.0);
-   glEnd();
+   drawTriangle();
    
    glMatrixMode(GL_MODELVIEW);
    
@@ -33,11 +37,7 @@ int main(int argc, char** argv)
    glRotatef(90.0,0.0,0.0,1.0);
    glTranslatef(-3.0,-5.0,0.0);
    glColor3f(1.0,0.0,0.0);
-   glBegin(GL_TRIANGLES);
-   		glVertex2f(2.0,4.0);
-   		glVertex2f(3.0,4.0);
-   		glVertex2f(2.0,5.0);
-   glEnd();
+   drawTriangle();
    
    glLoadIdentity();
    glTranslatef(-2.0,1.0,0.0);
@@ -45,11 +45,7 @@ int main(int argc, char** argv)
    glRotatef(90.0,0.0,0.0,1.0);
    glTranslatef(-3.0,-5.0,0.0);
    glColor3f(0.0,1.0,0.0);
-   glBegin(GL_TRIANGLES);
-   		glVertex2f(2.0,4.0);
-   		glVertex2f(3.0,4.0);
-   		glVertex2f(2.0,5.0);
-   glEnd();
+   drawTriangle();
    
    glLoadIdentity();
    glScalef(2.0,2.0,1.0);
@@ -58,11 +54,7 @@ int main(int argc, char** argv)
    glRotatef(90.0,0.0,0.0,1.0);
    glTranslatef(-3.0,-5.0,0.0);
    glColor3f(0.0,0.0,1.0);
-   glBegin(GL_TRIANGLES);
-   		glVertex2f(2.0,4.0);
-   		glVertex2f(3.0,4.0);
-   		glVertex2f(2.0,5.0);
-   glEnd();
+   drawTriangle();
    
    glFlush();
 
