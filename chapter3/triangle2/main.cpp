@@ -124,6 +124,7 @@ int main(int argc, char** argv)
 	glLineStipple(1,0xFFFF);
 	glLoadIdentity();
 	glColor3f(0.0,1.0,0.0);
+	glScalef(1.0,-1.0,1.0);
 	glTranslatef(-2.0,1.0,0.0);
 	glScalef(-1.0,1.0,1.0);
 	glTranslatef(2.0,3.0,0.0);
